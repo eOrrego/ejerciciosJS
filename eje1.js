@@ -220,7 +220,7 @@
 
 //     } while (confirm("Aceptar para continuar ingresando texto\nCancelar para terminar") == true);
 
-//     console.log(texto);
+//     console.log("El texto ingresado es: ",texto);
 // }
 
 // 4- Realiza un script que pida números hasta que se pulse “cancelar”. Si no es un número deberá indicarse con un «alert» y seguir pidiendo números. Al salir con “cancelar” deberá indicarse la suma total de los números introducidos.
@@ -260,19 +260,177 @@
 
 // Dificultad:  🟢🟡
 
-const letraDNI = ["T", "R", "W", "A", "G", "M", "Y", "F", "P", "D", "X", "B", "N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E"];
+// const letraDNI = ["T", "R", "W", "A", "G", "M", "Y", "F", "P", "D", "X", "B", "N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E"];
 
-let dni;
+// let dni;
 
-do {
-    dni = parseInt(prompt("Ingrese numero de DNI"));
-    if ((dni < 0) || (dni > 99999999)) {
-        alert("no es un numero valido de DNI");
-    } else if (isNaN(dni)) {
-        alert("no es valido");
-    } else {
-        const resultado = dni % 23;
-        console.log(resultado, letraDNI[resultado]);
-    }
-} while ((dni < 0) || (dni > 99999999) || isNaN(dni));
+// do {
+//     dni = parseInt(prompt("Ingrese numero de DNI"));
+//     if ((dni < 0) || (dni > 99999999)) {
+//         alert("no es un numero valido de DNI");
+//     } else if (isNaN(dni)) {
+//         alert("no es valido");
+//     } else {
+//         const resultado = dni % 23;
+//         console.log("Nro de DNI:", dni,":", letraDNI[resultado]);
+//     }
+// } while ((dni < 0) || (dni > 99999999) || isNaN(dni) || confirm("Aceptar para continuar ingresando DNI\nCancelar para terminar"));
 
+
+// Dificultad:  🟢🟡
+// 6- Realiza un script que escriba una pirámide del 1 al 30 de la siguiente forma :
+
+// 1
+// 22
+// 333
+// 4444
+// 55555
+// 666666
+// …….
+
+// let i = 0;
+// let b = 0;
+
+// while (i <= 30) {
+//     while (b < i) {
+//         document.write(i);
+//         b++;
+//     }
+//     document.write("<br>");
+//     i++;
+//     b = 0;
+// }
+
+// Dificultad:  🟢🟡
+// 7- Haz un script que escriba una pirámide inversa de los números del 1 al número que indique el usuario (no mayor de 50)  de la siguiente forma : (suponiendo que indica 30).
+
+// 303030303030303030303030303030303030303030303030303030303030
+// 2929292929292929292929292929292929292929292929292929292929
+// 28282828282828282828282828282828282828282828282828282828
+// …..
+// 333
+// 22
+// 1
+
+// let i = 0;
+
+// do {
+//     i = parseInt(prompt("Ingrese un numero de 0 a 50:"));
+// } while ((i < 0) || (i > 50));
+
+// let b = 0;
+
+// while (i > 0) {
+//     while (b < i) {
+//         document.write(i);
+//         b++;
+//     }
+//     document.write("<br>");
+//     i--;
+//     b = 0;
+// }
+
+// Dificultad:  🟢🟡
+// 8- Crea script para generar pirámide siguiente con los números del 1 al número que indique el usuario (no mayor de 50) 
+
+// 1
+// 12
+// 123
+// 1234
+// 12345
+// 123456
+// ……
+
+// let num = 0;
+// let c = 1;
+
+// do {
+//     num = parseInt(prompt("Ingrese un numero de 0 a 50:"));
+// } while ((num < 0) || (num > 50));
+
+// for (let i = 1; i <= num; i++) {
+//     for (let b = 0; b < i; b++) {
+//         document.write(c);
+//         c++;
+//     }
+//     document.write("<br>");
+//     c = 1;
+// }
+
+// Dificultad:  🟢🟡🔴
+// 9- Crea un script que escriba los números del 1 al 500, que indique cuáles son múltiplos de 4 y de 9 y que cada 5 líneas muestre una línea horizontal. Por ejemplo :
+
+// 1
+// 2
+// 3
+// 4 (Múltiplo de 4)
+// 5-
+// ————————————————————-
+
+// 6
+// 7
+// 8 (Múltiplo de 4)
+// 9 (Múltiplo de 9)
+// 10
+
+// let cont = 1;
+
+// for (let i = 1; i < 50; i++) {
+//     if (i % 4 === 0) {
+//         console.log(i, "multiplo de 4");
+//     } 
+
+//     if (i % 9 === 0) {
+//         console.log(i, "multiplo de 9");
+//     } else {
+//         console.log(i);
+//     }
+
+//     if (i % 5 === 0) {
+//         console.log("-----------");
+//     }
+//     // cont++;
+// }
+
+// 10- Realiza un script que pida número de filas y columnas y escriba una tabla. Dentro de cada una de las celdas deberá escribirse un número consecutivo en orden descendente. Si, por ejemplo, la tabla es de 7×5 los números irán del 35 al 1.
+
+// Ejercicios con Math
+
+
+// Dificultad:  🟢🟡
+
+// let fila = parseInt(prompt("Ingrese nro de filas:"));
+
+// let columna = parseInt(prompt("Ingrese nro de columnas:"));
+
+// let cont = fila*columna;
+
+// for (let i = 0; i < fila; i++) {
+//     for (let b = 0; b < columna; b++) {
+//         document.write(cont);
+//         cont--;
+//     }
+//     document.write("<br>");
+// }
+
+// Dificultad:  🟢🟡
+// 11- Realiza un script que pida por teclado 3 edades y 3 nombres e indique el nombre del mayor. *
+
+// Nota: ver funcion Math() https://www.w3schools.com/js/js_math.asp
+
+
+// let nombre1 = prompt("Ingrese nombre1: ");
+// let edad1 = parseInt(prompt("Ingrese edad1: "));
+
+// let nombre2 = prompt("Ingrese nombre2: ");
+// let edad2 = parseInt(prompt("Ingrese edad2: "));
+
+// let nombre3 = prompt("Ingrese nombre3: ");
+// let edad3 = parseInt(prompt("Ingrese edad3: "));
+
+// let edadMax = Math.max(edad1, edad2, edad3);
+
+// console.log(edadMax);
+
+
+// perdona1=["pepe",50];
