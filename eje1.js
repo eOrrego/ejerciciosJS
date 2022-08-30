@@ -418,19 +418,165 @@
 
 // Nota: ver funcion Math() https://www.w3schools.com/js/js_math.asp
 
-
-// let nombre1 = prompt("Ingrese nombre1: ");
-// let edad1 = parseInt(prompt("Ingrese edad1: "));
-
-// let nombre2 = prompt("Ingrese nombre2: ");
-// let edad2 = parseInt(prompt("Ingrese edad2: "));
-
-// let nombre3 = prompt("Ingrese nombre3: ");
-// let edad3 = parseInt(prompt("Ingrese edad3: "));
-
-// let edadMax = Math.max(edad1, edad2, edad3);
-
-// console.log(edadMax);
+// let persona1 = [];
+// let persona2 = [];
+// let persona3 = [];
 
 
-// perdona1=["pepe",50];
+// persona1[0] = prompt("Ingrese nombre1: ");
+// persona1[1] = parseInt(prompt("Ingrese edad1: "));
+
+// persona2[0] = prompt("Ingrese nombre2: ");
+// persona2[1] = parseInt(prompt("Ingrese edad2: "));
+
+// persona3[0] = prompt("Ingrese nombre3: ");
+// persona3[1] = parseInt(prompt("Ingrese edad3: "));
+
+// let edadMax = Math.max(persona1[1], persona2[1], persona3[1]);
+
+// if (edadMax == persona1[1]) {
+//     console.log(`El mayor es ${persona1[0]} que tiene ${persona1[1]} años`);
+// } else if (edadMax == persona2[1]) {
+//     console.log(`El mayor es ${persona2[0]} que tiene ${persona2[1]} años`);
+// } else if (edadMax == persona3[1]) {
+//     console.log(`El mayor es ${persona3[0]} que tiene ${persona3[1]} años`);
+// }
+
+// Dificultad:  🟢🟡
+// 12- Realiza un script que genere un número aleatorio entre 1 y 99
+
+// let ganador = [];
+
+// console.log("Los numeros ganadores para el QUINI 6:");
+
+// for (let i = 0; i < 6; i++) {
+//     ganador[i] = Math.floor(Math.random() * 46);
+// }
+
+// console.log(ganador);
+
+
+// Dificultad:  🟢🟡
+// 13- Realiza un script que pida un texto y lo muestre en mayúsculas.
+
+// let texto = prompt("Ingrese texto: ");
+
+// console.log(texto.toUpperCase());
+
+// Dificultad:  🟢🟡
+// 14- Realiza un script que pida una cadena de texto y lo muestre poniendo el signo – entre cada carácter sin usar el método replace. 
+// Por ejemplo, si tecleo “hola qué tal”, deberá salir “h-o-l-a- -q-u-e- -t-a-l”.
+
+// let texto = prompt("Ingrese texto: ");
+// let textoT = "";
+
+// let cont = texto.length;
+
+// for (let i = 0; i < cont; i++) {
+//     textoT += texto[i]+"-";
+// }
+
+// console.log(textoT);
+
+// Dificultad:  🟢🟡
+// 15- Realiza un script que cuente el número de vocales que tiene un texto.
+
+// let texto = prompt("Ingrese texto: ");
+
+// let cont = texto.length;
+
+// let vocales = 0;
+
+// for (let i = 0; i < cont; i++) {
+//     if ((texto[i] == "a") || (texto[i] == "e") || (texto[i] == "i") || (texto[i] == "o") || (texto[i] == "u")) {
+//         vocales++;
+//     }
+// }
+
+// console.log("Vocales que tiene el texto ingresado: ", vocales);
+
+// Dificultad:  🟢🟡
+// 16- Realiza un script que pida una cadena de texto y la devuelva al revés. 
+// Es decir, si tecleo “hola que tal” deberá mostrar “lat euq aloh”.
+
+// let texto = prompt("Ingrese texto: ");
+
+// let cont = texto.length;
+// let b = cont;
+// let textoT = "";
+
+// for (let i = 0; i < cont; i++) {
+//     b--;
+//     textoT += texto[b];
+// }
+
+// console.log("Texto ingresado: ",texto);
+// console.log("Texto invertido: ",textoT);
+
+
+// Dificultad:  🟢
+// 17- Realiza un script que muestre la posición de la primera vocal de un texto introducido por teclado.
+
+// let texto = prompt("Ingrese texto: ");
+
+// let cont = texto.length;
+
+// let b = 0;
+
+// for (let i = 0; i < cont; i++) {
+//     if ((texto[i] == "a") || (texto[i] == "e") || (texto[i] == "i") || (texto[i] == "o") || (texto[i] == "u")) {
+//         b = texto.indexOf(texto[i]);
+//         break;
+//     }
+// }
+
+// console.log("La posicion de la primera vocal es: ",b);
+
+
+// 1) Generar un número secreto
+// aleatorio con la siguiente instruccion:
+// Genera un numero entero aleatorio de 1 a 20
+
+// let randomNumber=Math.floor(Math.random()*20) 
+
+
+// 2) Pedir al usuario que ingrese un número y que
+// intente adivinar el número que eligió la computadora.
+
+// 3) Si el numero ingresado por el usuario es mayor
+// al número secreto, avisarle que es muy grande y que intente de nuevo y que
+// vuelva al paso 2.
+
+// 4) Si el numero ingresado es menor al número
+// secreto, avisarle que es muy chico, y que intente de nuevo volviendo al paso 2.
+
+// 5) Si el número ingresado coincide con el número
+// secreto, sacar el siguiente mensaje:
+// "Felicitaciones, has adivinado el número
+// secreto que era:  [numeroSecreto]"
+// "Lo has logrado en [n] intentos!!"
+// Y finalizar el programa.
+
+// Nota:
+// Obviamente hay que hacer un bucle y crear un contador de intentos.
+// Sean honestos con ustedes mismos y usen sus propias neuronas para resolver el problema, 
+// y aunque no lo terminen lo importante es intentarlo.
+
+// let randomNumber = Math.floor(Math.random() * 20);
+// let suerte;
+// let cont = 0;
+
+// do {
+//     suerte = parseInt(prompt("Ingrese numero:"));
+
+//     if (suerte > randomNumber) {
+//         console.log("El numero secreto es menor");
+//     } else if (suerte < randomNumber) {
+//         console.log("El numero secreto es mayor");
+//     }
+
+//     cont++;
+// } while (randomNumber !== suerte);
+
+// console.log(`Felicitaciones, has adivinado el número secreto que era: ${suerte}`);
+// console.log(`Lo has logrado en ${cont} intentos!!`);
