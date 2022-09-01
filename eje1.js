@@ -376,20 +376,21 @@
 // let cont = 1;
 
 // for (let i = 1; i < 50; i++) {
-//     if (i % 4 === 0) {
+//     if((i % 4 === 0) && (i % 9 === 0)){
+//         console.log(i, "multiplo de 4 y de 9");
+//     }else if (i % 4 === 0) {
 //         console.log(i, "multiplo de 4");
-//     } 
-
-//     if (i % 9 === 0) {
+//     }else if (i % 9 === 0) {
 //         console.log(i, "multiplo de 9");
-//     } else {
+//     }else {
 //         console.log(i);
 //     }
 
-//     if (i % 5 === 0) {
+//     if (cont === 5) {
 //         console.log("-----------");
+//         cont = 0;
 //     }
-//     // cont++;
+//     cont++;
 // }
 
 // 10- Realiza un script que pida número de filas y columnas y escriba una tabla. Dentro de cada una de las celdas deberá escribirse un número consecutivo en orden descendente. Si, por ejemplo, la tabla es de 7×5 los números irán del 35 al 1.
@@ -412,6 +413,8 @@
 //     }
 //     document.write("<br>");
 // }
+
+//console.table(["apples", "oranges", "bananas"]); para hacer tabla en consola
 
 // Dificultad:  🟢🟡
 // 11- Realiza un script que pida por teclado 3 edades y 3 nombres e indique el nombre del mayor. *
@@ -585,5 +588,5 @@
 // Arrays
 // Dificultad:  🟢
 // 1- Crear un array llamado meses y que almacene el nombre de los doce meses del año. Mostrar por pantalla en forma de lista  los doce nombres del arreglo.
-HOlaCHAU
+
 
