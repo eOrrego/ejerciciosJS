@@ -414,7 +414,7 @@
 //     document.write("<br>");
 // }
 
-//console.table(["apples", "oranges", "bananas"]); para hacer tabla en consola
+//console.table(["apples", "oranges", "bananas"]); //para hacer tabla en consola
 
 // Dificultad:  🟢🟡
 // 11- Realiza un script que pida por teclado 3 edades y 3 nombres e indique el nombre del mayor. *
@@ -587,6 +587,40 @@
 
 // Arrays
 // Dificultad:  🟢
-// 1- Crear un array llamado meses y que almacene el nombre de los doce meses del año. Mostrar por pantalla en forma de lista  los doce nombres del arreglo.
+// 1- Crear un array llamado meses y que almacene el nombre de los doce meses del año. 
+// Mostrar por pantalla en forma de lista  los doce nombres del arreglo.
+
+// let meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "junio", "julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+
+// for (let i = 0; i < meses.length; i++) {
+//     document.write(`<li>${meses[i]}</li>`);
+// }
+
+
+// Dificultad:  🟢🟡
+// 2-  Crear un script que solicite al usuario mediante un prompt el nombre de ciudades y almacenarlas en un arreglo, 
+// cuando el usuario selecciona cancelar se debe mostrar el arreglo generado, luego realizar las siguientes acciones:
+// Mostrar la longitud del arreglo.
+// Mostrar en el documento web los ítems de las posiciones primera, tercera y última.
+// Añade en última posición la ciudad de París.
+// Escribe por pantalla el elemento que ocupa la segunda posición.
+// Sustituye el elemento que ocupa la segunda posición por la ciudad de 'Barcelona'.
+
+// let ciudad;
+// let ciudades = [];
+
+// do {
+//     ciudad = prompt("Ingrese una ciudad: ");
+//     ciudades.push(ciudad);
+// } while (confirm("Aceptar para continuar ingresando ciudades\nCancelar para terminar"));
+
+// document.write(`Las ciudades ingresadas son las siguientes: `, ciudades);
+// document.write(`<br>La longitud del arreglo es: `, ciudades.length);
+// document.write(`<br>Primera ciudad: `, ciudades[0]);
+// document.write(`<br>Ultima ciudad: `, ciudades[ciudades.length-1]);
+
+// ciudades.push("Paris");
+
+// document.write(`<br>Las ciudades ingresadas son las siguientes: `, ciudades);
 
 
