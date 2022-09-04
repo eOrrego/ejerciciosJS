@@ -709,8 +709,8 @@
 //     altura = parseInt(prompt("Ingrese altura de rectangulo: "));
 // } while ((base <= 0) || (altura <= 0));
 
-// const perimetro = (base, altura) => { return (2 * (base + altura)) };
-// const superficie = (base, altura) => { return (base * altura) };
+// const perimetro = (base, altura) => 2 * (base + altura);
+// const superficie = (base, altura) => base * altura;
 
 // let opcion = parseInt(prompt("Ingrese opcion, 1 para perimetro, 2 para superficie: "));
 
