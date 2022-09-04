@@ -623,4 +623,122 @@
 
 // document.write(`<br>Las ciudades ingresadas son las siguientes: `, ciudades);
 
+// document.write(`<br>La segunda ciudad es: `, ciudades[1]);
+
+// ciudades[1]= "Barcelona";
+
+// document.write(`<br>Cambie la segunda ciudad por Barcelona: `, ciudades);
+
+// Dificultad:  🟢🟡🔴
+
+// 3- Escribir un script que simule el lanzamiento de dos dados. Hacer uso de la función Math.random para obtener números aleatorios entre 1 y 6 para cada uno de los lanzamientos de los dados. Sumar el resultado de lanzar dos dados y anotar en un array el número de apariciones de dicha suma, repitiendo 50 veces esta operación.
+
+// let dado1 = Math.floor(Math.random() * 6 + 1);
+// let dado2 = Math.floor(Math.random() * 6 + 1);
+// let resultado = [];
+// let i = 0;
+
+// console.log("%cSUMA DE DADOS", "color: green; font-size: 20px");
+// do {
+//     dado1 = Math.floor(Math.random() * 6 + 1);
+//     dado2 = Math.floor(Math.random() * 6 + 1);
+//     resultado[i] = dado1 + dado2;
+//     i++;
+//     console.log(resultado);
+// } while (confirm("Aceptar para tirar dados\nCancelar para salir"));
+
+// Funciones
+// Dificultad:  🟢
+// 1- Escribir el código de una función a la que se pasa como parámetro un número entero y devuelve como resultado una cadena de texto que indica si el número es par o impar. Mostrar por pantalla el resultado devuelto por la función.
+
+// const espar = numero => (numero % 2 === 0) ? alert("El numero es par") : alert("El numero es impar");
+// let numero = parseInt(prompt("Ingrese un numero"));
+
+// espar(numero);
+
+// Dificultad:  🟢🟡
+// 2- Definir una función que muestre información sobre una cadena de texto que se le pasa como argumento. A partir de la cadena que se le pasa, la función determina si esa cadena está formada sólo por mayúsculas, sólo por minúsculas o por una mezcla de ambas.
+
+// version A
+// const texto = prompt("Ingrese texto:");
+// let i=0;
+// let caracter='';
+// console.log(texto);
+// while (i < texto.length){
+//     caracter = texto.charAt(i);
+//     console.log(caracter);
+//     if (!isNaN(caracter * 1)){
+//         alert('El caracter es numerico');
+//     }else{
+//         if (caracter == caracter.toUpperCase()) {
+//             alert ('Es una letra mayuscula');
+//         }
+//         if (caracter == caracter.toLowerCase()){
+//             alert ('Es una letra minuscula');
+//         }
+//     }
+//     i++;
+// }
+
+// version B
+// const texto = prompt("Ingrese texto:");
+// const esmayus = texto => { return (texto === texto.toUpperCase()) };
+// const esminus = texto => { return (texto === texto.toLowerCase()) };
+
+// const resultado = (esmayus, esminus) => {
+//     if (esmayus) {
+//         alert("El texto esta escrito en Mayuscula");
+//     } else if (esminus) {
+//         alert("El texto esta escrito en Minnuscula");
+//     } else {
+//         alert("El texto es una combinacion de mayusculas y minusculas");
+//     }
+// }
+
+// resultado(esmayus(texto),esminus(texto));
+
+// Dificultad:  🟢🟡
+// 3- Solicitar por pantalla al usuario ingresar el valor de los lados de un rectángulo, luego crear una función para calcular su perímetro y mostrarlo por pantalla.
+
+// La fórmula del perímetro  es p = 2*(a +b)
+
+// let base;
+// let altura;
+// do {
+//     base = parseInt(prompt("Ingrese base de rectangulo: "));
+//     altura = parseInt(prompt("Ingrese altura de rectangulo: "));
+// } while ((base <= 0) || (altura <= 0));
+
+// const perimetro = (base, altura) => { return (2 * (base + altura)) };
+// const superficie = (base, altura) => { return (base * altura) };
+
+// let opcion = parseInt(prompt("Ingrese opcion, 1 para perimetro, 2 para superficie: "));
+
+// switch (opcion) {
+//     case 1:
+//         alert(`El perimetro del rectanguro es: ${perimetro(base, altura)}`);
+//         break;
+//     case 2:
+//         alert(`El perimetro del rectanguro es: ${superficie(base, altura)}`);
+//         break;
+//     default:
+//         alert("No selecciono una opcion valida");
+//         break;
+// }
+
+// Dificultad:  🟢🟡
+// 4- Escriba un script que muestre la tabla de multiplicar de un número ingresado por pantalla, la creación de la tabla debe ser realizada con una función y mostrar solo los resultados del 1 al 10 del número elegido por el usuario.
+
+// let numero;
+
+// do {
+//     numero = parseInt(prompt("Ver table de multiplicar del numero: "));
+// } while (numero <= 0);
+
+// const multiplo = (numero, i) => { return (numero * i) };
+
+// document.write(`Tabla de multiplicar del numero: ${numero} </br>`);
+// for (let i = 1; i <= 10; i++) {
+//     document.write(`${i} x ${numero} = ${multiplo(numero, i)} </br>`);
+// }
 
