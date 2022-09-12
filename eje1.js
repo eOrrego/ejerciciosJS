@@ -742,3 +742,127 @@
 //     document.write(`${i} x ${numero} = ${multiplo(numero, i)} </br>`);
 // }
 
+// Crear objetos
+// Dificultad:  🟢
+// 1- Crea un objeto llamado auto que tenga algunas características como el color, marca, modelo y si está encendido o apagado. Crea los métodos necesarios para permitir encender y apagar el auto.
+
+
+/* class Auto {
+    constructor(color, marca, modelo) {
+        this.color = color;
+        this.marca = marca;
+        this.modelo = modelo;
+        this.estado = false;
+    }
+    PrenderAuto() {
+        this.estado = true;
+    }
+
+    ApagarAuto(){
+        this.estado = false;
+    }
+
+    get mostrarEstadoAuto() {
+        this.estado ? console.log(`Estado del auto: Prendido`) : console.log(`Estado del auto: Apagado`)
+    }
+
+    get mostrarAuto() {
+        console.log(`Auto: ${this.marca}, ${this.modelo} y color: ${this.color}`);
+    }
+
+}
+
+let fiat = new Auto("rojo", "fiat", "uno");
+
+fiat.mostrarAuto; */
+
+/* Modelando clases
+
+Cuenta bancaria - Dificultad:  🟢🟡
+2-Escribe un programa que cree un objeto "cuenta" con las siguientes propiedades:
+Una propiedad titular con el valor "Alex".
+Una propiedad saldo, teniendo como valor inicial 0.
+Un método ingresar() que permita añadir dinero a la cuenta, pasando la cantidad como parámetro
+Un método extraer() que permita retirar la cantidad pasada como parámetro.
+Un método informar() que retorne la información del estado de la cuenta. 
+
+Utiliza este objeto para mostrar la descripción, ingresar y extraer dinero y volver a mostrar la descripción del estado de la cuenta. */
+
+/* class Cuenta {
+    constructor(titular) {
+        this.titular = titular;
+        this.saldo = 0;
+    }
+
+    set ingresar(valor) {
+        this.saldo += valor;
+    }
+
+    set extraer(valor) {
+        this.saldo -= valor;
+    }
+
+    get informar() {
+        console.log("Hola", this.titular);
+        console.log("Su saldo es:", this.saldo);
+    }
+} */
+
+/* Rectángulos
+Dificultad:  🟢
+3-Escribe una clase que permita crear distintos objetos “rectángulos”, con las propiedades de alto y ancho, mas los métodos necesarios para modificar y mostrar sus propiedades, calcular el perímetro y el área */
+
+/* class Rectangulos {
+    constructor(base, altura) {
+        this.base = base;
+        this.altura = altura;
+    }
+    set setBase(valor) {
+        this.base = valor;
+    }
+    set setAltura(valor) {
+        this.altura = valor;
+    }
+    get getCalculos() {
+        console.log("Calculos del rectangulo de %d x %d", this.base, this.altura);
+        console.log("Perimetro:", 2 * (this.base + this.altura));
+        console.log("Área:", this.base * this.altura);
+    }
+} */
+
+/* Producto - Dificultad:  🟢🟡
+
+4- Escribe una clase Producto para crear objetos. Estos objetos, deben presentar las propiedades código, nombre y precio, además del método imprime datos, el cual escribe por pantalla los valores de sus propiedades.
+Posteriormente, cree tres instancias de este objeto y guárdalas en un array.
+Por último, utilice el método imprime datos para mostrar por pantalla los valores de los tres objetos instanciados. */
+
+class Producto {
+    constructor(codigo, nombre, precio) {
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.precio = precio;
+    }
+}
+
+/* class Carrito {
+    constructor(carro) {
+        this.carro = carro;
+    }
+    get mostrarCarrito(){
+        for (let i = 0; i < this.carro.length; i++) {
+            console.log("El producto: %s tiene el precio: %d", this.carro[i].nombre, this.carro[i].precio);
+        }
+    }
+
+    set agregarProducto(prod){
+        this.carro.push(prod);
+    }
+}
+
+let sopa = new Producto(10, "sopa", 100);
+let azucar = new Producto(20, "azucar", 150);
+let pan = new Producto(5, "pan", 50);
+
+let carro1 = [sopa, azucar, pan];
+
+let carro = new Carrito(carro1); */
