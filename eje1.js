@@ -866,3 +866,65 @@ let pan = new Producto(5, "pan", 50);
 let carro1 = [sopa, azucar, pan];
 
 let carro = new Carrito(carro1); */
+
+// Prueba 
+// setInterval(() => console.log("Hola"), 600);  
+
+
+/* Tarea Objetos.
+---------------------------
+○ Escribe una clase Producto para crear objetos.
+○ Estos objetos, deben presentar las propiedades id, nombre y precio,
+además del método imprime datos, el cual escribe por pantalla los valores de
+sus propiedades.
+○ Posteriormente, cree tres instancias de este objeto y guárdalas en un array.
+○ Por último, utilice el método imprime datos para mostrar por pantalla los
+valores de los tres objetos instanciados. */
+
+// class Producto {
+//     constructor(id, articulo, precio) {
+//         this.id = id,
+//             this.articulo = articulo,
+//             this.precio = precio
+//     }
+
+//     get getdatos() {
+//         return `**********\nCod.: ${this.id}\nArticulo: ${this.articulo}\nPrecio: ${this.precio}\n**********`;
+//     }
+// }
+
+// const art1 = new Producto(10, "Teclado", 1500);
+// const art2 = new Producto(20, "Mouse", 500);
+// const art3 = new Producto(50, "Monitor", 60000);
+
+// const carrito = [];
+// carrito[0] = art1;
+// carrito.push(art2, art3);
+
+
+// console.log("%cCON FOR","color:yellow; font-size: 20px;")
+// for (let i = 0; i < carrito.length; i++) {
+//     console.log(carrito[i].getdatos);
+// }
+
+// console.log("%cCON MAP","color:yellow; font-size: 20px;")
+// carrito.map(({ id, articulo, precio }) => {
+
+//     console.log(`${id} Articulo: ${articulo} Precio: ${precio}`)
+
+// });
+
+// console.log("%cCON MAP llamando al metodo del obj","color:yellow; font-size: 20px;")
+// carrito.map((articulos) => {
+
+//     console.log(articulos.getdatos)
+
+// });
+
+
+/* Tarea de BOM.
+---------------------------
+Crear una rama en git, y setear un interval de 2 minutos. 
+Crear un botón que setee el tiempo en 2 min
+Modificar todas las funciones y validaciones que sean necesarias para que ande el interval de 2 min. */
+
