@@ -898,23 +898,22 @@ valores de los tres objetos instanciados. */
 // const art3 = new Producto(50, "Monitor", 60000);
 
 // const carrito = [];
-// carrito[0] = art1;
-// carrito.push(art2, art3);
+// carrito.push(art1, art2, art3);
 
 
-// console.log("%cCON FOR","color:yellow; font-size: 20px;")
+// console.log("%cCON FOR", "color:yellow; font-size: 20px;")
 // for (let i = 0; i < carrito.length; i++) {
 //     console.log(carrito[i].getdatos);
 // }
 
-// console.log("%cCON MAP","color:yellow; font-size: 20px;")
+// console.log("%cCON MAP", "color:yellow; font-size: 20px;")
 // carrito.map(({ id, articulo, precio }) => {
 
 //     console.log(`${id} Articulo: ${articulo} Precio: ${precio}`)
 
 // });
 
-// console.log("%cCON MAP llamando al metodo del obj","color:yellow; font-size: 20px;")
+// console.log("%cCON MAP llamando al metodo del obj", "color:yellow; font-size: 20px;")
 // carrito.map((articulos) => {
 
 //     console.log(articulos.getdatos)
@@ -924,7 +923,93 @@ valores de los tres objetos instanciados. */
 
 /* Tarea de BOM.
 ---------------------------
-Crear una rama en git, y setear un interval de 2 minutos. 
+Crear una rama en git, y setear un interval de 2 minutos.
 Crear un botón que setee el tiempo en 2 min
 Modificar todas las funciones y validaciones que sean necesarias para que ande el interval de 2 min. */
+
+// Ya lo hice en el repo de coco. 
+
+/* Generaciones - Dificultad:  🟢🟡🔴
+
+5- Crea una clase llamada Persona que siga las siguientes condiciones:
+Sus propiedades son: nombre, edad, DNI, sexo (H hombre, M mujer), peso y altura, año de nacimiento. Si quieres añadir alguna propiedad extra puedes hacerlo.
+Los métodos que se debe poder utilizar  son:
+mostrarGeneracion: este método debe mostrar un mensaje indicando a qué generación pertenece la persona creada y cual es el rasgo característico de esta generación.
+Para realizar este método tener en cuenta la siguiente tabla de generaciones:
+
+esMayorDeEdad: indica si es mayor de edad, devuelve un mensaje indicando que la persona es mayor de edad.
+mostrarDatos: devuelve toda la información del objeto.
+generaDNI(): genera un número aleatorio de 8 cifras. */
+
+// class Persona {
+//     constructor(nombre, edad, sexo, peso, altura, anioNac) {
+//         this.nombre = nombre,
+//             this.edad = edad,
+//             this.sexo = sexo,
+//             this.peso = peso,
+//             this.altura = altura,
+//             this.anioNac = anioNac,
+//             this.dni = this.getDni
+//     }
+//     get getDni() {
+//         return Math.floor(Math.random() * (50000000 - 40000000 + 1)) + 40000000;
+//     }
+//     get mostrarGeneracion() {
+//         switch (true) {
+//             case (this.anioNac >= 1930 && this.anioNac <= 1948):
+//                 console.log(`%c${this.nombre} nació en el año ${this.anioNac}`, "color:green; font-size: 25px;")
+//                 console.log("%c1930-1948 - Silent Generation (Los niños de la posguerra)", "color:yellow; font-size: 20px;");
+//                 console.log("%cRango carasterístico: Austeridad", "color:yellow; font-size: 15px;");
+//                 break;
+//             case (this.anioNac >= 1949 && this.anioNac <= 1968):
+//                 console.log(`%c${this.nombre} nació en el año ${this.anioNac}`, "color:green; font-size: 25px;")
+//                 console.log("%c1949-1968 - Baby Boom", "color:yellow; font-size: 20px;");
+//                 console.log("%cRango carasterístico: Ambición", "color:yellow; font-size: 15px;");
+//                 break;
+//             case (this.anioNac >= 1969 && this.anioNac <= 1980):
+//                 console.log(`%c${this.nombre} nació en el año ${this.anioNac}`, "color:green; font-size: 25px;")
+//                 console.log("%c1969-1980 - Generación X", "color:yellow; font-size: 20px;");
+//                 console.log("%cRango carasterístico: Obsesión por el éxito", "color:yellow; font-size: 15px;");
+//                 break;
+//             case (this.anioNac >= 1981 && this.anioNac <= 1993):
+//                 console.log(`%c${this.nombre} nació en el año ${this.anioNac}`, "color:green; font-size: 25px;")
+//                 console.log("%c1981-1993 - Generación Y (millennials)", "color:yellow; font-size: 20px;");
+//                 console.log("%cRango carasterístico: Frustración", "color:yellow; font-size: 15px;");
+//                 break;
+//             case (this.anioNac >= 1994 && this.anioNac <= 2010):
+//                 console.log(`%c${this.nombre} nació en el año ${this.anioNac}`, "color:green; font-size: 25px;")
+//                 console.log("%c1994-2010 - Generación Z", "color:yellow; font-size: 20px;");
+//                 console.log("%cRango carasterístico: Irreverencia", "color:yellow; font-size: 15px;");
+//                 break;
+//             default:
+//                 this.anioNac > 2010 ? console.log("%cSin generacion, Muy joven", "color:red; font-size: 10px;") : console.log("%cSin generacion, Muy viejo", "color:red; font-size: 10px;");
+//                 break;
+//         }
+//     }
+//     get esMayorDeEdad() {
+//         const fecha = new Date();
+//         let anio = fecha.getFullYear();
+//         (anio - this.anioNac) >= 18 ? console.log(`%c${this.nombre} es Mayor de edad`, "color:green; font-size: 15px;") : console.log(`%c${this.nombre} es Menor de edad`, "color:red; font-size: 15px;");
+//     }
+//     get mostrarDatos() {
+//         console.log(`%cDATOS PERSONALES:
+//         Nombre: ${this.nombre}
+//         Edad: ${this.edad}
+//         Sexo: ${this.sexo}
+//         Peso: ${this.peso}kg
+//         Altura: ${this.altura}cm
+//         Año de Nac: ${this.anioNac}
+//         DNI: ${this.dni}`, "font-size: 13px;");
+//     }
+// }
+
+// let persona1 = new Persona("Pedro", 37, "H", 82, 185, 1985),
+//     persona2 = new Persona("Juan", 75, "H", 75, 170, 1947),
+//     persona3 = new Persona("Diego", 57, "H", 75, 170, 1965),
+//     persona4 = new Persona("Lau", 45, "M", 75, 170, 1977),
+//     persona5 = new Persona("Maria", 14, "M", 75, 170, 2008),
+//     persona6 = new Persona("Valeria", 102, "M", 75, 170, 1920),
+//     persona7 = new Persona("Emma", 7, "M", 75, 170, 2015);
+
+// // console.log(persona1, persona2, persona3, persona4, persona5, persona6, persona7);
 
