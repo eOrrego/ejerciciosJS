@@ -1013,3 +1013,155 @@ generaDNI(): genera un número aleatorio de 8 cifras. */
 
 // // console.log(persona1, persona2, persona3, persona4, persona5, persona6, persona7);
 
+/* Libros - Dificultad:  🟢🟡🔴
+6- Crear una clase Libro que contenga al menos las siguientes propiedades:
+ISBN
+Título
+Autor
+Número de páginas
+
+Crear sus respectivos métodos get y set correspondientes para cada propiedad. Crear el método mostrarLibro() para mostrar la información relativa al libro con el siguiente formato:
+
+“El libro xxx con ISBN xxx creado por el autor xxx tiene páginas xxx”
+
+Crear al menos 2 objetos libros y utilizar el método mostrarLibro();
+Por último, indicar cuál de los 2 objetos “libros” tiene más páginas. */
+
+// class Libro {
+//     constructor(titulo, autor, nroPag) {
+//         this.titulo = titulo,
+//             this.autor = autor,
+//             this.nroPag = nroPag
+//         this.ISBN = this.getISBN;
+//     }
+//     get getISBN() {
+//         return "ISBN" + (Math.floor(Math.random() * (50000000 - 40000000 + 1)) + 40000000);
+//     }
+//     get mostrarLibro() {
+//         console.log(`El libro ${this.titulo} con ${this.ISBN} creado por el autor ${this.autor} tiene ${this.nroPag} páginas
+//         `);
+//     }
+// }
+
+// let libro1 = new Libro("El Principito", "Antoine de Saint-Exupéry", 256),
+//     libro2 = new Libro("El Padrino", "Mario Puzo", 550);
+
+// let biblioteca = [];
+
+// biblioteca.push(libro1, libro2);
+
+// biblioteca.map(lib => lib.mostrarLibro);
+
+// libro1.nroPag > libro2.nroPag ? console.log(`El libro ${libro1.titulo} tiene más páginas`) : console.log(`El libro ${libro2.titulo} tiene más páginas`);
+
+/* Agenda telefónica - Dificultad:  🟢🟡🔴
+
+7- Nos piden realizar una agenda telefónica de contactos.
+
+Un contacto está definido por un nombre y un teléfono. Se considera que un contacto es igual a otro cuando sus nombres son iguales.
+
+Una agenda de contactos está formada por un conjunto de contactos. Se podrá crear de dos formas, indicando nosotros el tamaño o con un tamaño por defecto (10).
+
+Los métodos de la agenda serán los siguientes:
+
+aniadirContacto(Contacto): Añade un contacto a la agenda, sino la agenda no puede almacenar más contactos indicar por pantalla.
+existeContacto(Conctacto): indica si el contacto pasado existe o no.
+listarContactos(): Lista toda la agenda
+buscarContacto(nombre): busca un contacto por su nombre y muestra su teléfono.
+eliminarContacto(Contacto c): elimina el contacto de la agenda, indica si se ha eliminado o no por pantalla
+agendaLlena(): indica si la agenda está llena.
+huecosLibres(): indica cuántos contactos más podemos ingresar.
+
+Crea un menú con opciones por consola para probar todas estas funcionalidades. */
+
+// class Contacto {
+//     constructor(nombre, telefono) {
+//         this.nombre = nombre;
+//         this.telefono = telefono;
+//     }
+//     get listarContactos() {
+//         return (`Contacto: ${this.nombre}
+// Telefono: ${this.telefono}`);
+//     }
+// }
+
+// class Agenda {
+//     constructor() {
+//         this.contactos = [];
+//         this.cantCon = 0;
+//     }
+//     set aniadirContacto(newCon) {
+//         if (!this.existeContacto(newCon.nombre)) {
+//             this.contactos.length < this.cantCon ? this.contactos.push(newCon) : console.log(`%cNo hay más espacio.`, "color: red;");
+//         } else {
+//             console.log(`%cEl contacto ya existe.`, "color: red");
+//         }
+//     }
+//     set setcantCon(cant) {
+//         this.cantCon = cant;
+//     }
+//     existeContacto(dato) {
+//         let b = false;
+//         this.contactos.map(cont => {
+//             if (!b) {
+//                 if (cont.nombre == dato) {
+//                     return b = true;
+//                 }
+//             }
+//         });
+//         return b;
+//     }
+
+//     buscarContacto(dato) {
+//         let b = false;
+//         this.contactos.map(cont => {
+//             if (!b) {
+//                 if (cont.nombre == dato) {
+//                     b = true;
+//                     return console.log(`${cont.nombre} existe y su telefono es ${cont.telefono}.`);
+//                 }
+//             }
+//         });
+//         !b ? console.log(`${dato} NO existe.`) : "";
+//     }
+
+//     eliminarContacto(dato) {
+//         let b = false;
+//         this.contactos.map((cont, i) => {
+//             if (!b) {
+//                 if (cont.nombre == dato) {
+//                     b = true;
+//                     this.contactos.splice(i, 1);
+//                 }
+//             }
+//         });
+//         !b ? console.log(`${dato} NO existe.`) : console.log(`Se elimino el contantacto: ${dato}.`);
+//     }
+
+//     get listarContactos() {
+//         this.contactos.map(cont => console.log(`Contacto: ${cont.nombre}
+// Telefono: ${cont.telefono}`));
+//     }
+
+//     get agendaLlena() {
+//         this.cantCon == this.contactos.length ? console.log("La agenda se encuentra completa"): this.huecosLibres;
+//     }
+
+//     get huecosLibres() {
+//         console.log("Espacio libre para ingresar contactos:", this.cantCon - this.contactos.length);
+//     }
+// }
+
+
+// let contacto1 = new Contacto("Juan", 3816423430),
+//     contacto2 = new Contacto("Jose", 3816423430),
+//     contacto3 = new Contacto("Pedro", 3816423430),
+//     contacto4 = new Contacto("Alicia", 3816423430),
+//     contacto5 = new Contacto("Maria", 3816423430),
+//     agendaPrueba = [];
+
+// agendaPrueba.push(contacto1, contacto2, contacto3, contacto4, contacto5);
+// console.log("Contactos Pre cargados para usar en agenda:");
+// agendaPrueba.map(cont => console.log(cont.listarContactos));
+
+// let agenda1 = new Agenda();
