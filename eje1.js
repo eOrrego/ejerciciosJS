@@ -1144,7 +1144,7 @@ Crea un menú con opciones por consola para probar todas estas funcionalidades. 
 //     }
 
 //     get agendaLlena() {
-//         this.cantCon == this.contactos.length ? console.log("La agenda se encuentra completa"): this.huecosLibres;
+//         this.cantCon == this.contactos.length ? console.log("La agenda se encuentra completa") : this.huecosLibres;
 //     }
 
 //     get huecosLibres() {
@@ -1153,15 +1153,49 @@ Crea un menú con opciones por consola para probar todas estas funcionalidades. 
 // }
 
 
-// let contacto1 = new Contacto("Juan", 3816423430),
-//     contacto2 = new Contacto("Jose", 3816423430),
-//     contacto3 = new Contacto("Pedro", 3816423430),
-//     contacto4 = new Contacto("Alicia", 3816423430),
-//     contacto5 = new Contacto("Maria", 3816423430),
-//     agendaPrueba = [];
+// const myFunction = () => {
+//     let agenda = new Agenda();
+//     let b = true;
+//     let info;
 
-// agendaPrueba.push(contacto1, contacto2, contacto3, contacto4, contacto5);
-// console.log("Contactos Pre cargados para usar en agenda:");
-// agendaPrueba.map(cont => console.log(cont.listarContactos));
+//     do {
+//         let opcion = parseInt(prompt("Ingrese una opcion:"))
 
-// let agenda1 = new Agenda();
+//         switch (opcion) {
+//             case 0:
+//                 b = false;
+//                 console.log("Chau!!!");
+//                 break;
+//             case 1:
+//                 agenda.setcantCon = parseInt(prompt("Ingresa cantidad de contactos a agendar:"));
+//                 break;
+//             case 2:
+//                 let nom = prompt("Ingrese nombre del contacto:");
+//                 let tel = parseInt(prompt("Ingrese el telefono del contacto:"));
+//                 let nuevoCon = new Contacto(nom, tel);
+//                 agenda.aniadirContacto = nuevoCon;
+//                 break;
+//             case 3:
+//                 agenda.listarContactos;
+//                 break;
+//             case 4:
+//                 info = prompt("Buscar contacto:");
+//                 agenda.buscarContacto(info);
+//                 break;
+//             case 5:
+//                 agenda.agendaLlena;
+//                 break;
+//             case 6:
+//                 agenda.huecosLibres;
+//                 break;
+//             case 7:
+//                 info = prompt("Contacto a eliminar:");
+//                 agenda.eliminarContacto(info);
+//                 break;
+//             default:
+//                 console.log("NO INGRESO OPCION CORRECTA");
+//                 break;
+//         }
+//     } while (b);
+// }
+
