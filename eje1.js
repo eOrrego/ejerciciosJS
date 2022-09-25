@@ -1074,136 +1074,168 @@ huecosLibres(): indica cuántos contactos más podemos ingresar.
 
 Crea un menú con opciones por consola para probar todas estas funcionalidades. */
 
-class Contacto {
-    constructor(nombre, telefono) {
-        this.nombre = nombre;
-        this.telefono = telefono;
-    }
-    get listarContactos() {
-        return (`Contacto: ${this.nombre}
-Telefono: ${this.telefono}`);
-    }
-}
+// class Contacto {
+//     constructor(nombre, telefono) {
+//         this.nombre = nombre;
+//         this.telefono = telefono;
+//     }
+//     get listarContactos() {
+//         return (`Contacto: ${this.nombre}
+// Telefono: ${this.telefono}`);
+//     }
+// }
 
-class Agenda {
-    constructor() {
-        this.contactos = [];
-        this.cantCon = 0;
-    }
-    set aniadirContacto(newCon) {
-        if (!this.existeContacto(newCon.nombre)) {
-            this.contactos.length < this.cantCon ? this.contactos.push(newCon) : console.log(`%cNo hay más espacio.`, "color: red;");
-        } else {
-            console.log(`%cEl contacto ya existe.`, "color: red");
-        }
-    }
-    set setcantCon(cant) {
-        this.cantCon = cant;
-    }
-    existeContacto(dato) {
-        let b = false;
-        this.contactos.map(cont => {
-            if (!b) {
-                if (cont.nombre == dato) {
-                    return b = true;
-                }
-            }
-        });
-        return b;
-    }
+// class Agenda {
+//     constructor() {
+//         this.contactos = [];
+//         this.cantCon = 0;
+//     }
+//     set aniadirContacto(newCon) {
+//         if (!this.existeContacto(newCon.nombre)) {
+//             this.contactos.length < this.cantCon ? this.contactos.push(newCon) : console.log(`%cNo hay más espacio.`, "color: red;");
+//         } else {
+//             console.log(`%cEl contacto ya existe.`, "color: red");
+//         }
+//     }
+//     set setcantCon(cant) {
+//         this.cantCon = cant;
+//     }
+//     existeContacto(dato) {
+//         let b = false;
+//         this.contactos.map(cont => {
+//             if (!b) {
+//                 if (cont.nombre == dato) {
+//                     return b = true;
+//                 }
+//             }
+//         });
+//         return b;
+//     }
 
-    // buscarContacto(dato) {
-    //     let b = false;
-    //     this.contactos.map(cont => {
-    //         if (!b) {
-    //             if (cont.nombre == dato) {
-    //                 b = true;
-    //                 return console.log(`${cont.nombre} existe y su telefono es ${cont.telefono}.`);
-    //             }
-    //         }
-    //     });
-    //     !b ? console.log(`${dato} NO existe.`) : "";
-    // }
+//     // buscarContacto(dato) {
+//     //     let b = false;
+//     //     this.contactos.map(cont => {
+//     //         if (!b) {
+//     //             if (cont.nombre == dato) {
+//     //                 b = true;
+//     //                 return console.log(`${cont.nombre} existe y su telefono es ${cont.telefono}.`);
+//     //             }
+//     //         }
+//     //     });
+//     //     !b ? console.log(`${dato} NO existe.`) : "";
+//     // }
 
-    //MEJORANDO METODO BUSCAR CON .find
+//     //MEJORANDO METODO BUSCAR CON .find
 
-    buscarContacto(dato) {
-        const result = this.contactos.find(({ nombre }) => nombre === dato);
-        result ? console.log(`${result.nombre} existe y su telefono es ${result.telefono}.`) : console.log("No hay resultados");
-    }
+//     buscarContacto(dato) {
+//         const result = this.contactos.find(({ nombre }) => nombre === dato);
+//         result ? console.log(`${result.nombre} existe y su telefono es ${result.telefono}.`) : console.log("No hay resultados");
+//     }
 
-    eliminarContacto(dato) {
-        let b = false;
-        this.contactos.map((cont, i) => {
-            if (!b) {
-                if (cont.nombre == dato) {
-                    b = true;
-                    this.contactos.splice(i, 1);
-                }
-            }
-        });
-        !b ? console.log(`${dato} NO existe.`) : console.log(`Se elimino el contantacto: ${dato}.`);
-    }
+//     eliminarContacto(dato) {
+//         let b = false;
+//         this.contactos.map((cont, i) => {
+//             if (!b) {
+//                 if (cont.nombre == dato) {
+//                     b = true;
+//                     this.contactos.splice(i, 1);
+//                 }
+//             }
+//         });
+//         !b ? console.log(`${dato} NO existe.`) : console.log(`Se elimino el contantacto: ${dato}.`);
+//     }
 
-    get listarContactos() {
-        this.contactos.map(cont => console.log(`Contacto: ${cont.nombre}
-Telefono: ${cont.telefono}`));
-    }
+//     get listarContactos() {
+//         this.contactos.map(cont => console.log(`Contacto: ${cont.nombre}
+// Telefono: ${cont.telefono}`));
+//     }
 
-    get agendaLlena() {
-        this.cantCon == this.contactos.length ? console.log("La agenda se encuentra completa") : this.huecosLibres;
-    }
+//     get agendaLlena() {
+//         this.cantCon == this.contactos.length ? console.log("La agenda se encuentra completa") : this.huecosLibres;
+//     }
 
-    get huecosLibres() {
-        console.log("Espacio libre para ingresar contactos:", this.cantCon - this.contactos.length);
-    }
-}
+//     get huecosLibres() {
+//         console.log("Espacio libre para ingresar contactos:", this.cantCon - this.contactos.length);
+//     }
+// }
 
 
-const myFunction = () => {
-    let agenda = new Agenda();
-    let b = true;
-    let info;
+// const myFunction = () => {
+//     let agenda = new Agenda();
+//     let b = true;
+//     let info;
 
-    do {
-        let opcion = parseInt(prompt("Ingrese una opcion:"))
+//     do {
+//         let opcion = parseInt(prompt("Ingrese una opcion:"))
 
-        switch (opcion) {
-            case 0:
-                b = false;
-                console.log("Chau!!!");
-                break;
-            case 1:
-                agenda.setcantCon = parseInt(prompt("Ingresa cantidad de contactos a agendar:"));
-                break;
-            case 2:
-                let nom = prompt("Ingrese nombre del contacto:");
-                let tel = parseInt(prompt("Ingrese el telefono del contacto:"));
-                let nuevoCon = new Contacto(nom, tel);
-                agenda.aniadirContacto = nuevoCon;
-                break;
-            case 3:
-                agenda.listarContactos;
-                break;
-            case 4:
-                info = prompt("Buscar contacto:");
-                agenda.buscarContacto(info);
-                break;
-            case 5:
-                agenda.agendaLlena;
-                break;
-            case 6:
-                agenda.huecosLibres;
-                break;
-            case 7:
-                info = prompt("Contacto a eliminar:");
-                agenda.eliminarContacto(info);
-                break;
-            default:
-                console.log("NO INGRESO OPCION CORRECTA");
-                break;
-        }
-    } while (b);
-}
+//         switch (opcion) {
+//             case 0:
+//                 b = false;
+//                 console.log("Chau!!!");
+//                 break;
+//             case 1:
+//                 agenda.setcantCon = parseInt(prompt("Ingresa cantidad de contactos a agendar:"));
+//                 break;
+//             case 2:
+//                 let nom = prompt("Ingrese nombre del contacto:");
+//                 let tel = parseInt(prompt("Ingrese el telefono del contacto:"));
+//                 let nuevoCon = new Contacto(nom, tel);
+//                 agenda.aniadirContacto = nuevoCon;
+//                 break;
+//             case 3:
+//                 agenda.listarContactos;
+//                 break;
+//             case 4:
+//                 info = prompt("Buscar contacto:");
+//                 agenda.buscarContacto(info);
+//                 break;
+//             case 5:
+//                 agenda.agendaLlena;
+//                 break;
+//             case 6:
+//                 agenda.huecosLibres;
+//                 break;
+//             case 7:
+//                 info = prompt("Contacto a eliminar:");
+//                 agenda.eliminarContacto(info);
+//                 break;
+//             default:
+//                 console.log("NO INGRESO OPCION CORRECTA");
+//                 break;
+//         }
+//     } while (b);
+// }
 
 // usar find para buscar en arreglos
+
+
+// Ejercicios javascript
+// Prácticas con DOM y BOM
+// Números mágicos - Dificultad:  🟢
+// 1- Crea una web con bootstrap y js, que contenga un botón comenzar el juego, en ese momento se crea un número aleatorio que el usuario deberá adivinar, la interfaz del usuario debe tener además un input para ingresar un número y un botón enviar, al presionar el botón enviar mostrar en un alert si el usuario adivino o no el número mágico, si no lo adivino indicarle con un alert si el numero que ingreso es mayor o menor al número mágico.
+// Cuando el usuario adivine el numero mostrar un mensaje indicando al usuario que adivino el numero.
+
+
+const randomNumber = Math.floor(Math.random() * 20);
+let suerte;
+let cont = 0;
+
+const magic = () => {
+    suerte = document.querySelector('#exampleInputNumber1').value;
+    if (suerte > randomNumber) {
+        swal("El numero secreto es menor");
+        cont++;
+    } else if (suerte < randomNumber) {
+        swal("El numero secreto es mayor");
+        cont++;
+    } else {
+        cont++;
+        swal({
+            title: "Buen Trabajo!",
+            text: `El nro de la suerte es: ${suerte}
+            Lo has logrado en ${cont} intentos!!`,
+            icon: "success",
+            button: "Cerrar",
+        });
+    }
+};
