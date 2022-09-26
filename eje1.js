@@ -1220,13 +1220,20 @@ const randomNumber = Math.floor(Math.random() * 20);
 let suerte;
 let cont = 0;
 
+document.getElementById("button1").addEventListener("click", () => {
+    document.getElementById("exampleInputNumber1").focus();
+});
 const magic = () => {
+
+
     suerte = document.querySelector('#exampleInputNumber1').value;
     if (suerte > randomNumber) {
         swal("El numero secreto es menor");
+        document.getElementById('exampleInputNumber1').value = '';
         cont++;
     } else if (suerte < randomNumber) {
         swal("El numero secreto es mayor");
+        document.getElementById('exampleInputNumber1').value = '';
         cont++;
     } else {
         cont++;
