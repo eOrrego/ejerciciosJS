@@ -1220,9 +1220,9 @@ const randomNumber = Math.floor(Math.random() * 20);
 let suerte;
 let cont = 0;
 
-document.getElementById("button1").addEventListener("click", () => {
-    document.getElementById("exampleInputNumber1").focus();
-});
+// document.getElementById("button1").addEventListener("click", () => {
+//     document.getElementById("exampleInputNumber1").focus();
+// });
 const magic = () => {
 
 
