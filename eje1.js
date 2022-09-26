@@ -1237,5 +1237,8 @@ const magic = () => {
             icon: "success",
             button: "Cerrar",
         });
+        setTimeout(function () {
+            window.location.reload();
+        }, 5000);
     }
 };
