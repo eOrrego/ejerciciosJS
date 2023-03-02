@@ -1,6 +1,6 @@
 ejercicios JS 2022
 Esteban Orrego - RollingCode Full Stack
-sin commit 2
+sin commit 3
 
 Dificultad:  🟢
 1.- Escribe un programa de una sola línea que haga que aparezca en la pantalla un alert que diga “un mensaje”.
