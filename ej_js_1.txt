@@ -1,6 +1,6 @@
 ejercicios JS 2022
 Esteban Orrego - RollingCode Full Stack
-sin commit 3
+sin commit 4
 enfermo 1
 
 Dificultad:  🟢
